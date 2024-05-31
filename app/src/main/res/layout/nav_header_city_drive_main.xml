@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:orientation="vertical"
+    android:gravity="bottom">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80.00dp"
+        android:layout_height="80.00dp"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/add_profile"
+        android:contentDescription="@string/nav_header_desc"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:text="Profile Name"
+        android:textSize="18.00sp"
+        android:fontFamily="@font/poppins" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_header_subtitle"
+        android:textSize="15.00sp"
+        android:id="@+id/textView" />
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.00dp"
+            app:cardCornerRadius="10.00dp"
+            android:layout_marginEnd="10.00dp"
+            android:elevation="15.00dp">
+
+            <LinearLayout
+                android:layout_width="110.00dp"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15.00dp"
+                android:background="@color/lightBlue"
+                android:gravity="center"
+                android:paddingHorizontal="25.00dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20.00dp"
+                    android:layout_height="20.00dp"
+                    android:src="@drawable/history"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Histroy"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10.00dp"
+            android:layout_margin="10.00dp"
+            android:elevation="15.00dp">
+
+            <LinearLayout
+                android:layout_width="110.00dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="15.00dp"
+                android:background="@color/lightBlue"
+                android:paddingHorizontal="25.00dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20.00dp"
+                    android:layout_height="20.00dp"
+                    android:src="@drawable/payment"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.00dp"
+            app:cardCornerRadius="10.00dp"
+            android:layout_marginEnd="10.00dp"
+            android:elevation="15.00dp">
+
+            <LinearLayout
+                android:layout_width="110.00dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="15.00dp"
+                android:background="@color/lightBlue"
+                android:paddingHorizontal="25.00dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20.00dp"
+                    android:layout_height="20.00dp"
+                    android:src="@drawable/support"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10.00dp"
+            android:layout_margin="10.00dp"
+            android:elevation="15.00dp">
+
+            <LinearLayout
+                android:layout_width="110.00dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@color/lightBlue"
+                android:paddingVertical="15.00dp"
+                android:paddingHorizontal="25.00dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="20.00dp"
+                    android:layout_height="20.00dp"
+                    android:src="@drawable/calender"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Support "
+                    android:layout_gravity="center"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+
+</LinearLayout>

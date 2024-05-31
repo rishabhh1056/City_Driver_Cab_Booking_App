@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_editProfile"
+            android:icon="@drawable/edit_profile"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/nav_Address"
+            android:icon="@drawable/map"
+            android:title="Address" />
+        <item
+            android:id="@+id/nav_complaint"
+            android:icon="@drawable/complain"
+            android:title="complaint" />
+
+        <item
+            android:id="@+id/nav_referrals"
+            android:icon="@drawable/referral"
+            android:title="referrals" />
+        <item
+            android:id="@+id/nav_aboutUs"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+        <item
+            android:id="@+id/nav_Settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/nav_helpAndSupport"
+            android:icon="@drawable/help_and_support"
+            android:title="Help And Support" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+    </group>
+</menu>

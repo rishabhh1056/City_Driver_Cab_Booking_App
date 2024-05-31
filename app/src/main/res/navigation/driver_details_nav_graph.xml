@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/driver_details_nav_graph"
+    app:startDestination="@id/driverDetailFragment">
+
+    <fragment
+        android:id="@+id/driverDetailFragment"
+        android:name="com.example.citydriver.DriverDetailFragment"
+        android:label="fragment_driver_detail"
+        tools:layout="@layout/fragment_driver_detail" >
+        <action
+            android:id="@+id/action_driverDetailFragment_to_licenceFragment"
+            app:destination="@id/licenceFragment" />
+        <action
+            android:id="@+id/action_driverDetailFragment_to_adharFragment"
+            app:destination="@id/adharFragment" />
+        <action
+            android:id="@+id/action_driverDetailFragment_to_panFragment"
+            app:destination="@id/panFragment" />
+        <action
+            android:id="@+id/action_driverDetailFragment_to_rcFragment"
+            app:destination="@id/rcFragment" />
+        <action
+            android:id="@+id/action_driverDetailFragment_to_permitFragment"
+            app:destination="@id/permitFragment" />
+        <action
+            android:id="@+id/action_driverDetailFragment_to_insuranceFragment"
+            app:destination="@id/insuranceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/licenceFragment"
+        android:name="com.example.citydriver.LicenceFragment"
+        android:label="fragment_licence"
+        tools:layout="@layout/fragment_licence" >
+        <action
+            android:id="@+id/action_licenceFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adharFragment"
+        android:name="com.example.citydriver.AdharFragment"
+        android:label="fragment_adhar"
+        tools:layout="@layout/fragment_adhar" >
+        <action
+            android:id="@+id/action_adharFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/panFragment"
+        android:name="com.example.citydriver.PanFragment"
+        android:label="fragment_pan"
+        tools:layout="@layout/fragment_pan" >
+        <action
+            android:id="@+id/action_panFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rcFragment"
+        android:name="com.example.citydriver.RcFragment"
+        android:label="fragment_rc"
+        tools:layout="@layout/fragment_rc" >
+        <action
+            android:id="@+id/action_rcFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/insuranceFragment"
+        android:name="com.example.citydriver.InsuranceFragment"
+        android:label="fragment_insurance"
+        tools:layout="@layout/fragment_insurance" >
+        <action
+            android:id="@+id/action_insuranceFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permitFragment"
+        android:name="com.example.citydriver.PermitFragment"
+        android:label="fragment_permit"
+        tools:layout="@layout/fragment_permit" >
+        <action
+            android:id="@+id/action_permitFragment_to_driverDetailFragment"
+            app:destination="@id/driverDetailFragment" />
+    </fragment>
+</navigation>

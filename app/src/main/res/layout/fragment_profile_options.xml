@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/lightBlue"
+    tools:context=".View.Authentication.Views.Authentication.ProfileOptionsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose how you want to earn with city Ride "
+            android:fontFamily="@font/poppins"
+            android:textSize="20.00sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="30.00dp"
+            android:layout_marginHorizontal="15.00dp"
+            android:layout_marginTop="50.00dp"/>
+        
+        
+        <androidx.cardview.widget.CardView
+            android:id="@+id/car_owner"
+            android:layout_width="match_parent"
+            android:layout_height="110.00dp"
+            android:elevation="10.00dp"
+            app:cardCornerRadius="8.00dp"
+            android:layout_marginHorizontal="15.00dp"
+            android:layout_marginBottom="15.00dp">
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ride_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.00dp"
+                        android:src="@drawable/ride_btn"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginRight="10.00dp"/>
+
+                    <ImageView
+                        android:id="@+id/fleet_btn"
+                        android:layout_marginTop="10.00dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/fleet_btn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Car owner"
+                        android:layout_marginLeft="10.00dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="16.00sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:text="@string/car_owner"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginBottom="10.00dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14.00sp"/>
+
+                </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/car"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+            
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bike_owner"
+            android:layout_width="match_parent"
+            android:layout_height="110.00dp"
+            android:elevation="10.00dp"
+            app:cardCornerRadius="8.00dp"
+            android:layout_marginHorizontal="15.00dp"
+            android:layout_marginBottom="15.00dp">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rides1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.00dp"
+                        android:src="@drawable/rides"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginRight="10.00dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Motorbike (2 wheeler)"
+                            android:layout_marginLeft="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="16.00sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bick_owner"
+                            android:layout_marginLeft="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="14.00sp"/>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginTop="5.00dp"
+                        android:src="@drawable/moter_bicke"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/commercial_owner"
+            android:layout_width="match_parent"
+            android:layout_height="110.00dp"
+            android:elevation="10.00dp"
+            app:cardCornerRadius="8.00dp"
+            android:layout_marginHorizontal="15.00dp"
+            android:layout_marginBottom="15.00dp">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rides2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.00dp"
+                        android:src="@drawable/rides"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginRight="10.00dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Commercial Motorbike"
+                            android:layout_marginLeft="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="16.00sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/commerical_owner"
+                            android:layout_marginLeft="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="14.00sp"/>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginTop="5.00dp"
+                        android:src="@drawable/moter_bicke"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/auto_owner"
+            android:layout_width="match_parent"
+            android:layout_height="110.00dp"
+            android:elevation="10.00dp"
+            app:cardCornerRadius="8.00dp"
+            android:layout_marginHorizontal="15.00dp"
+            android:layout_marginBottom="15.00dp">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rides3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.00dp"
+                        android:src="@drawable/rides"
+                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginRight="10.00dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto rickshaw"
+                            android:layout_marginStart="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="16.00sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/car_owner"
+                            android:layout_marginStart="10.00dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            android:textSize="14.00sp"/>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10.00dp"
+                        android:src="@drawable/auto"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

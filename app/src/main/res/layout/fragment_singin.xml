@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".View.Authentication.Views.Authentication.SinginFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="276.00dp"
+        android:layout_marginHorizontal="18.00dp"
+        android:src="@drawable/welcome_screen"
+        android:layout_marginTop="50.00dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="66.00dp"
+        android:layout_marginHorizontal="43.00dp"
+        android:layout_marginTop="40.00dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="500"
+            android:fontFamily="@font/poppins"
+            android:text="Join us via phone number"
+            android:textColor="@color/black"
+            android:textSize="20.00sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="400"
+            android:fontFamily="@font/poppins"
+            android:text="We’ll text a code to verify your phone"
+            android:textColor="#A0A0A0"
+            android:layout_gravity="center"
+            android:textSize="14.00sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40.00dp"
+        android:background="@drawable/bg_edit_text"
+        android:layout_marginHorizontal="15.00dp"
+        android:orientation="horizontal">
+
+
+     <com.hbb20.CountryCodePicker
+         android:id="@+id/CountryCodePicker"
+         android:layout_width="wrap_content"
+         android:layout_height="60.00dp"
+         app:ccp_showArrow="true"
+         app:ccp_showPhoneCode="true"
+         app:ccp_showNameCode="false"
+         android:layout_gravity="center"
+         android:paddingTop="10.00dp"
+         app:ccpDialog_showFlag="true"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40.00dp"
+            android:layout_marginTop="10.00dp"
+            android:background="#E0E0E0" />
+
+        <EditText
+            android:id="@+id/ETMobileNumber"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:layout_height="60.00dp"
+            android:hint="your mobile number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_gravity="center"
+            android:paddingLeft="50.00dp"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60.00dp"
+        android:text="Next"
+        android:layout_marginHorizontal="16.00dp"
+        android:layout_marginTop="20.00dp"
+        android:background="@drawable/bg_btn"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or login with"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins"
+        android:layout_marginTop="20.00dp"
+        android:textColor="#A0A0A0"/>
+
+
+    <TextView
+        android:id="@+id/signInWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="40.00dp"
+        android:layout_height="60.00dp"
+        android:layout_marginTop="20.00dp"
+        android:layout_marginHorizontal="16.00dp"
+        android:text="Sign in with Google"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/poppins"
+        android:drawableLeft="@drawable/google"
+        android:drawablePadding="40.00dp"
+        android:paddingLeft="30.00dp"
+        android:background="@drawable/bg_edit_text"
+        android:textColor="@color/black"/>
+
+
+
+
+    </LinearLayout>
+
+    </ScrollView>
+    
+</LinearLayout>

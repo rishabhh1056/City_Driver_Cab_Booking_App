@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DriverDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/DarkBlue"
+            android:title="City Rider"
+            android:titleTextColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Mr"
+            android:textSize="24.00sp"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:layout_marginStart="10.00dp"
+            android:layout_marginTop="10.00dp"/>
+
+        <TextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abhay"
+            android:textSize="24.00sp"
+            android:fontFamily="@font/poppins"
+            android:layout_marginStart="10.00dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here’s what you need to do to set up \nyour account."
+            android:paddingStart="10.00dp"/>
+
+
+        <TextView
+            android:id="@+id/DL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Driving License - Front"
+            android:background="@drawable/bg_edit_text"
+            android:padding="15.00dp"
+            android:textSize="16.00sp"
+            android:layout_marginVertical="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/adhar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Adhaar Card"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:padding="15.00dp"
+            android:textSize="16.00sp"
+            android:layout_marginBottom="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/panCad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PAN Card"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:padding="10.00dp"
+            android:textSize="16.00sp"
+            android:layout_marginBottom="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/RC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Certificate (RC)"
+            android:background="@drawable/bg_edit_text"
+            android:padding="15.00dp"
+            android:textSize="16.00sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+
+        <TextView
+            android:id="@+id/insurance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Insurance"
+            android:background="@drawable/bg_edit_text"
+            android:padding="15.00dp"
+            android:textSize="16.00sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+        <TextView
+            android:id="@+id/permit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Permit"
+            android:background="@drawable/bg_edit_text"
+            android:padding="15.00dp"
+            android:textColor="@color/black"
+            android:textSize="16.00sp"
+            android:layout_marginBottom="15.00dp"
+            android:layout_marginHorizontal="10.00dp"
+            android:drawableStart="@drawable/id_card"
+            android:drawablePadding="10dp"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Help"
+    android:backgroundTint="@color/lightBlue"
+    android:textColor="@color/black"
+    android:layout_marginEnd="15.dp"
+    android:layout_marginTop="2.00dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
