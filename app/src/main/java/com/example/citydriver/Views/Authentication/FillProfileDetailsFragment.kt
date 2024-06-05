@@ -10,7 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.citydriver.DriverDetailsMainActivity
+import com.example.citydriver.CityDriveMainActivity
 import com.example.citydriver.R
 import com.example.citydriver.databinding.FragmentFillProfileDetailsBinding
 
@@ -37,7 +37,7 @@ class FillProfileDetailsFragment : Fragment() {
                 .putString("name", name)
                 .apply()
             Log.e("TAG", "onCreateView: EtName ${binding.EtName.text.toString()}*** ", )
-            startActivity(Intent(requireActivity(), DriverDetailsMainActivity::class.java))
+            startActivity(Intent(requireActivity(), CityDriveMainActivity::class.java))
             requireActivity().finish()
         }
         return binding.root
