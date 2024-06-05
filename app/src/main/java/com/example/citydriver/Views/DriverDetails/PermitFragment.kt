@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import com.example.citydriver.databinding.FragmentPermitBinding
 
 
@@ -23,7 +27,20 @@ private lateinit var binding: FragmentPermitBinding
             startActivity(Intent(requireActivity(),CityDriveMainActivity::class.java))
             requireActivity().finish()
         }
+        changeColorStatusBar()
         return binding.root
+    }
+
+    fun changeColorStatusBar() {
+        val window: Window? = this.activity?.window
+        window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window?.statusBarColor = ContextCompat.getColor(this.requireContext(), R.color.DarkBlue)
+        if (window != null) {
+            WindowCompat.getInsetsController(window, window.decorView).apply {
+                isAppearanceLightStatusBars = true
+            }
+        }
+
     }
 
 

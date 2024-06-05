@@ -7,6 +7,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.view.WindowCompat
 import androidx.navigation.fragment.findNavController
 import com.example.citydriver.R
 import com.example.citydriver.databinding.FragmentOTPBinding
@@ -15,12 +21,16 @@ import com.example.citydriver.databinding.FragmentOTPBinding
 class OTPFragment : Fragment() {
 
     private lateinit var binding: FragmentOTPBinding
+    private var originalMode : Int? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View? {
         binding = FragmentOTPBinding.inflate(layoutInflater)
+        originalMode = activity?.window?.attributes?.softInputMode
+        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
 
         castumazingEntringOTP()
 
@@ -31,6 +41,12 @@ class OTPFragment : Fragment() {
         binding.otpVerifyBtn.setOnClickListener {
             findNavController().navigate(R.id.action_OTPFragment_to_profileOptionsFragment)
         }
+
+
+        binding.otp1.setOnFocusChangeListener { view, hasFocus ->
+           activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE)
+        }
+        changeColorStatusBar()
         return binding.root
     }
 
@@ -76,5 +92,32 @@ class OTPFragment : Fragment() {
 
             })
         }
+    }
+
+    fun changeColorStatusBar() {
+        val window: Window? = this.activity?.window
+        window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window?.statusBarColor = ContextCompat.getColor(this.requireContext(), R.color.white)
+        if (window != null) {
+            WindowCompat.getInsetsController(window, window.decorView).apply {
+                isAppearanceLightStatusBars = true
+            }
+        }
+    }
+
+    fun showSoftKeyboard(view: View) {
+        if (view.requestFocus()) {
+            val imm = getSystemService(requireContext(), InputMethodManager::class.java)
+            if (imm != null) {
+                imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT)
+            }
+        }
+    }
+
+
+
+    override fun onDestroy() {
+        super.onDestroy()
+        originalMode?.let { activity?.window?.setSoftInputMode(it) }
     }
 }

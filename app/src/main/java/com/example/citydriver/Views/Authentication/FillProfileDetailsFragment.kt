@@ -9,6 +9,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
+import android.view.inputmethod.InputMethodManager
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.navigation.fragment.findNavController
 import com.example.citydriver.DriverDetailsMainActivity
 import com.example.citydriver.R
@@ -16,7 +21,7 @@ import com.example.citydriver.databinding.FragmentFillProfileDetailsBinding
 
 
 class FillProfileDetailsFragment : Fragment() {
-
+    private var originalMode : Int? = null
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var binding: FragmentFillProfileDetailsBinding
     override fun onCreateView(
@@ -25,6 +30,9 @@ class FillProfileDetailsFragment : Fragment() {
     ): View? {
         binding = FragmentFillProfileDetailsBinding.inflate(inflater, container, false)
         // Inflate the layout for this fragment
+
+        originalMode = activity?.window?.attributes?.softInputMode
+        activity?.window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
 
         binding.backBtn.setOnClickListener {
          findNavController().navigate(R.id.action_fillProfileDetailsFragment_to_profileOptionsFragment)
@@ -40,10 +48,30 @@ class FillProfileDetailsFragment : Fragment() {
             startActivity(Intent(requireActivity(), DriverDetailsMainActivity::class.java))
             requireActivity().finish()
         }
+        changeColorStatusBar()
         return binding.root
 
 
     }
+
+    fun changeColorStatusBar() {
+        val window: Window? = this.activity?.window
+        window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window?.statusBarColor = ContextCompat.getColor(this.requireContext(), R.color.white)
+        if (window != null) {
+            WindowCompat.getInsetsController(window, window.decorView).apply {
+                isAppearanceLightStatusBars = true
+            }
+        }
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        originalMode?.let { activity?.window?.setSoftInputMode(it) }
+    }
+
+
 
 
 }

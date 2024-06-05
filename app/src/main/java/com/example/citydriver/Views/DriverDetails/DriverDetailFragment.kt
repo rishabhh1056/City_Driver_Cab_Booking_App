@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import android.view.WindowManager
+import androidx.core.content.ContextCompat
+import androidx.core.view.WindowCompat
 import androidx.navigation.fragment.findNavController
 import com.example.citydriver.View.Authentication.Views.Authentication.FillProfileDetailsFragment
 import com.example.citydriver.databinding.FragmentDriverDetailBinding
@@ -51,9 +55,21 @@ class DriverDetailFragment : Fragment() {
             findNavController().navigate(R.id.action_driverDetailFragment_to_permitFragment)
         }
 
-
+       changeColorStatusBar()
 
         return binding.root
+    }
+
+    fun changeColorStatusBar() {
+        val window: Window? = this.activity?.window
+        window?.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+        window?.statusBarColor = ContextCompat.getColor(this.requireContext(), R.color.DarkBlue)
+        if (window != null) {
+            WindowCompat.getInsetsController(window, window.decorView).apply {
+                isAppearanceLightStatusBars = true
+            }
+        }
+
     }
 
 

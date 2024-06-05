@@ -64,4 +64,7 @@ dependencies {
     //circule image
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
+    //MapBox
+    implementation("com.mapbox.maps:android:11.4.0")
+
 }

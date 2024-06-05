@@ -33,7 +33,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/car_owner"
             android:layout_width="match_parent"
-            android:layout_height="110.00dp"
+            android:layout_height="130.00dp"
             android:elevation="10.00dp"
             app:cardCornerRadius="8.00dp"
             android:layout_marginHorizontal="15.00dp"
@@ -50,21 +50,59 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/ride_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:src="@drawable/ride_btn"
-                        android:layout_marginLeft="10.00dp"
-                        android:layout_marginRight="10.00dp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="8.00dp"
+                        app:cardCornerRadius="4.00dp"
+                        android:layout_marginBottom="5.00dp"
+                        android:layout_marginEnd="10.00dp"
+                        android:layout_marginStart="10.00dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightBlue"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/rides1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="TODO"
+                                android:layout_gravity="center"
+                                android:src="@drawable/baseline_account_circle_24"/>
 
-                    <ImageView
-                        android:id="@+id/fleet_btn"
-                        android:layout_marginTop="10.00dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/fleet_btn"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Rides"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="4.00dp"
+                        android:layout_marginTop="8.00dp"
+                        android:layout_marginBottom="5.00dp"
+                        android:layout_marginEnd="10.00dp"
+                        android:layout_marginStart="10.00dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:background="@color/black"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="Fleet"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
                 </LinearLayout>
 
@@ -92,10 +130,9 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="2"
+                        android:layout_height="match_parent"
                         android:text="@string/car_owner"
-                        android:layout_marginLeft="10.00dp"
+                        android:layout_marginStart="10.00dp"
                         android:layout_marginBottom="10.00dp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/poppins"
@@ -119,7 +156,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/bike_owner"
             android:layout_width="match_parent"
-            android:layout_height="110.00dp"
+            android:layout_height="120.00dp"
             android:elevation="10.00dp"
             app:cardCornerRadius="8.00dp"
             android:layout_marginHorizontal="15.00dp"
@@ -136,14 +173,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/rides1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:src="@drawable/rides"
-                        android:layout_marginLeft="10.00dp"
-                        android:layout_marginRight="10.00dp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="8.00dp"
+                        app:cardCornerRadius="4.00dp"
+                        android:layout_marginBottom="5.00dp"
+                        android:layout_marginEnd="10.00dp"
+                        android:layout_marginStart="10.00dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightBlue"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/rides2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="TODO"
+                                android:layout_gravity="center"
+                                android:src="@drawable/baseline_account_circle_24"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Rides"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>
@@ -157,7 +215,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="2.5"
+                        android:layout_weight="2.3"
                         android:orientation="vertical">
 
                         <TextView
@@ -198,7 +256,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/commercial_owner"
             android:layout_width="match_parent"
-            android:layout_height="110.00dp"
+            android:layout_height="120.00dp"
             android:elevation="10.00dp"
             app:cardCornerRadius="8.00dp"
             android:layout_marginHorizontal="15.00dp"
@@ -215,14 +273,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/rides2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:src="@drawable/rides"
-                        android:layout_marginLeft="10.00dp"
-                        android:layout_marginRight="10.00dp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="4.00dp"
+                        android:layout_marginTop="8.00dp"
+                        android:layout_marginBottom="5.00dp"
+                        android:layout_marginEnd="10.00dp"
+                        android:layout_marginStart="10.00dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightBlue"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/rides3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="TODO"
+                                android:layout_gravity="center"
+                                android:src="@drawable/baseline_account_circle_24"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Rides"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>
@@ -236,7 +315,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="2.5"
+                        android:layout_weight="2.3"
                         android:orientation="vertical">
 
                         <TextView
@@ -277,7 +356,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/auto_owner"
             android:layout_width="match_parent"
-            android:layout_height="110.00dp"
+            android:layout_height="125.00dp"
             android:elevation="10.00dp"
             app:cardCornerRadius="8.00dp"
             android:layout_marginHorizontal="15.00dp"
@@ -294,14 +373,35 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/rides3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:src="@drawable/rides"
-                        android:layout_marginLeft="10.00dp"
-                        android:layout_marginRight="10.00dp"/>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="60dp"
+                        android:layout_height="25dp"
+                        app:cardCornerRadius="4.00dp"
+                        android:layout_marginTop="8.00dp"
+                        android:layout_marginBottom="5.00dp"
+                        android:layout_marginEnd="10.00dp"
+                        android:layout_marginStart="10.00dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightBlue"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:id="@+id/rides4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="TODO"
+                                android:layout_gravity="center"
+                                android:src="@drawable/baseline_account_circle_24"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Rides"/>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
 
 
                 </LinearLayout>
@@ -315,7 +415,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="2.5"
+                        android:layout_weight="2.3"
                         android:orientation="vertical">
 
                         <TextView

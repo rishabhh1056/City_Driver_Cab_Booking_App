@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,10 +8,8 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context=".View.Authentication.Views.Authentication.SinginFragment">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -66,12 +64,12 @@
      <com.hbb20.CountryCodePicker
          android:id="@+id/CountryCodePicker"
          android:layout_width="wrap_content"
-         android:layout_height="60.00dp"
+         android:layout_height="50.00dp"
          app:ccp_showArrow="true"
          app:ccp_showPhoneCode="true"
          app:ccp_showNameCode="false"
          android:layout_gravity="center"
-         android:paddingTop="10.00dp"
+         android:paddingTop="5.00dp"
          app:ccpDialog_showFlag="true"/>
 
         <View
@@ -81,21 +79,23 @@
             android:background="#E0E0E0" />
 
         <EditText
-            android:id="@+id/ETMobileNumber"
+            android:id="@+id/EtNumber"
             android:layout_width="match_parent"
-            android:textColor="@color/black"
-            android:layout_height="60.00dp"
-            android:hint="your mobile number"
+            android:layout_height="50.00dp"
+            android:singleLine="true"
             android:inputType="number"
+            android:imeOptions="actionDone"
             android:maxLength="10"
-            android:layout_gravity="center"
-            android:paddingLeft="50.00dp"/>
+            android:hint="Your Phone Number"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_edit_text"
+            android:paddingStart="10.00dp"/>
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextBtn"
         android:layout_width="match_parent"
-        android:layout_height="60.00dp"
+        android:layout_height="wrap_content"
         android:text="Next"
         android:layout_marginHorizontal="16.00dp"
         android:layout_marginTop="20.00dp"
@@ -116,7 +116,7 @@
         android:id="@+id/signInWithGoogle"
         android:layout_width="match_parent"
         android:layout_marginBottom="40.00dp"
-        android:layout_height="60.00dp"
+        android:layout_height="50.00dp"
         android:layout_marginTop="20.00dp"
         android:layout_marginHorizontal="16.00dp"
         android:text="Sign in with Google"
@@ -133,6 +133,6 @@
 
     </LinearLayout>
 
-    </ScrollView>
+
     
-</LinearLayout>
+</ScrollView>

@@ -16,5 +16,7 @@ class DriverDetailsMainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        window.statusBarColor = getColor(R.color.black)
     }
 }

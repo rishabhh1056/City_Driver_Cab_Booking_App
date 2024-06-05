@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.gms.maps.MapView
+        <com.mapbox.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
             android:layout_height="370.00dp"
@@ -44,12 +44,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:weightSum="3"
+
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:layout_marginBottom="10.00dp"
                         android:layout_marginStart="10.00dp"
                         android:layout_marginTop="10.00dp"
                         app:cardCornerRadius="10.00dp"
@@ -57,7 +59,7 @@
                         android:elevation="15.00dp">
 
                         <LinearLayout
-                            android:layout_width="120.00dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingVertical="15.00dp"
                             android:background="@color/lightBlue"
@@ -88,7 +90,7 @@
                         android:elevation="15.00dp">
 
                         <LinearLayout
-                            android:layout_width="120.00dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingVertical="15.00dp"
                             android:background="@color/lightBlue"
@@ -119,7 +121,7 @@
                         android:elevation="15.00dp">
 
                         <LinearLayout
-                            android:layout_width="120.00dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingVertical="15.00dp"
                             android:background="@color/lightBlue"
@@ -148,8 +150,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Searching for you on the map......"
-                    android:layout_marginTop="30.00dp"
-                    android:layout_gravity="center"
+                    android:layout_marginTop="20.00dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="20.00dp"
                     android:textColor="#A0A0A0"
                     android:drawableStart="@drawable/green_dot"
                     android:drawablePadding="30.00dp"/>
@@ -178,11 +181,11 @@
                     android:imeOptions="actionNext"
                     android:hint="Offer your fare"
                     android:drawablePadding="10.00dp"
-                    android:drawableStart="@drawable/rupee"
+                    android:drawableStart="@drawable/rupee_logo"
                     android:textColor="@color/black"
                     android:layout_marginHorizontal="15.00dp"
                     android:background="@drawable/bg_edit_text"
-                    android:layout_marginBottom="10.00dp"
+                    android:layout_marginBottom="15.00dp"
                     android:paddingLeft="10.00dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -207,8 +210,8 @@
             android:id="@+id/menuFloatingButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30.00dp"
-            android:layout_marginTop="20.00dp"
+            android:layout_marginStart="20.00dp"
+            android:layout_marginTop="30.00dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/baseline_dehaze_24"
             app:layout_constraintStart_toStartOf="parent"
@@ -219,12 +222,12 @@
             android:id="@+id/shareFloatingButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30.00dp"
-            android:layout_marginEnd="15.00dp"
+            android:layout_marginBottom="20dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/share"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/locationFloatingButton"
+            app:layout_constraintEnd_toEndOf="@+id/locationFloatingButton"
+            app:layout_constraintStart_toStartOf="@+id/locationFloatingButton" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/locationFloatingButton"
@@ -242,12 +245,12 @@
 
 
 
-        <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_city_drive_main"
-        app:menu="@menu/activity_onboarding_drawer" />
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/nav_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        app:headerLayout="@layout/nav_header_city_drive_main"-->
+<!--        app:menu="@menu/activity_onboarding_drawer" />-->
 </androidx.drawerlayout.widget.DrawerLayout>
