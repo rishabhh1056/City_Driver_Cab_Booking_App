@@ -16,194 +16,10 @@
         <com.mapbox.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="370.00dp"
+            android:layout_height="match_parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="match_parent"
-            android:layout_height="0.00dp"
-            android:elevation="4.00dp"
-            android:background="@drawable/card_bg"
-            android:layout_below="@+id/mapView"
-            android:src="@drawable/baseline_dehaze_24"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mapView">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="3"
-
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginBottom="10.00dp"
-                        android:layout_marginStart="10.00dp"
-                        android:layout_marginTop="10.00dp"
-                        app:cardCornerRadius="10.00dp"
-                        android:layout_marginEnd="10.00dp"
-                        android:elevation="15.00dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingVertical="15.00dp"
-                            android:background="@color/lightBlue"
-                            android:gravity="center"
-                            android:paddingHorizontal="25.00dp"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="50.00dp"
-                                android:layout_height="50.00dp"
-                                android:src="@drawable/car"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="15.00sp"
-                                android:text="Ride"/>
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="10.00dp"
-                        android:layout_marginEnd="10.00dp"
-                        android:elevation="15.00dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingVertical="15.00dp"
-                            android:background="@color/lightBlue"
-                            android:gravity="center"
-                            android:paddingHorizontal="25.00dp"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="50.00dp"
-                                android:layout_height="50.00dp"
-                                android:src="@drawable/auto"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="15.00sp"
-                                android:text="Auto"/>
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.00dp"
-                        android:layout_weight="1"
-                        app:cardCornerRadius="10.00dp"
-                        android:layout_marginEnd="10.00dp"
-                        android:elevation="15.00dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingVertical="15.00dp"
-                            android:background="@color/lightBlue"
-                            android:gravity="center"
-                            android:paddingHorizontal="25.00dp"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="50.00dp"
-                                android:layout_height="50.00dp"
-                                android:src="@drawable/moter_bicke"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textSize="15.00sp"
-                                android:text="Moto"/>
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Searching for you on the map......"
-                    android:layout_marginTop="20.00dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="20.00dp"
-                    android:textColor="#A0A0A0"
-                    android:drawableStart="@drawable/green_dot"
-                    android:drawablePadding="30.00dp"/>
-
-                <EditText
-                    android:id="@+id/EtTo"
-                    android:layout_width="match_parent"
-                    android:layout_height="50.00dp"
-                    android:singleLine="true"
-                    android:imeOptions="actionNext"
-                    android:hint="To"
-                    android:drawableStart="@drawable/search"
-                    android:drawablePadding="10dp"
-                    android:layout_marginTop="20.00dp"
-                    android:textColor="@color/black"
-                    android:layout_marginHorizontal="15.00dp"
-                    android:background="@drawable/bg_edit_text"
-                    android:layout_marginBottom="15.00dp"
-                    android:paddingStart="10.00dp"/>
-
-                <EditText
-                    android:id="@+id/EtName"
-                    android:layout_width="match_parent"
-                    android:layout_height="50.00dp"
-                    android:singleLine="true"
-                    android:imeOptions="actionNext"
-                    android:hint="Offer your fare"
-                    android:drawablePadding="10.00dp"
-                    android:drawableStart="@drawable/rupee_logo"
-                    android:textColor="@color/black"
-                    android:layout_marginHorizontal="15.00dp"
-                    android:background="@drawable/bg_edit_text"
-                    android:layout_marginBottom="15.00dp"
-                    android:paddingLeft="10.00dp"/>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/Find_driver_Btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="50.00dp"
-                    android:text="Find a Driver"
-                    android:layout_marginBottom="20.00dp"
-                    android:layout_marginHorizontal="16.00dp"
-                    android:background="@drawable/bg_btn"
-                    android:textColor="@color/white"/>
-
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -218,22 +34,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/shareFloatingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/share"
-            app:layout_constraintBottom_toTopOf="@+id/locationFloatingButton"
-            app:layout_constraintEnd_toEndOf="@+id/locationFloatingButton"
-            app:layout_constraintStart_toStartOf="@+id/locationFloatingButton" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/locationFloatingButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="320dp"
             android:layout_marginEnd="15dp"
             android:backgroundTint="@color/white"
             android:src="@drawable/my_location"
@@ -241,16 +48,167 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
+        <FrameLayout
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="310.00dp"
+            android:background="@drawable/app_bar_compact"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80.00dp"
+                            android:layout_height="80.00dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="10dp"
+                            android:src="@drawable/add_profile2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_gravity="center"
+                            android:textSize="16.00sp"
+                            android:text="Costumer Name"/>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Noida Sector 16"
+                        android:drawableLeft="@drawable/pickup"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:layout_marginTop="20.00dp"
+                        android:layout_marginStart="10.00dp"
+                        android:textSize="16.00sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IGI AirPort New Delhi"
+                        android:drawableLeft="@drawable/drop"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:layout_marginTop="10.00dp"
+                        android:layout_marginStart="10.00dp"
+                        android:textSize="16.00sp"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableLeft="@drawable/rupee_logo"
+                            android:textSize="18.00sp"
+                            android:text="299"/>
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+                <!--<ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20.00dp"
+                    android:progress="100"
+                    android:max="100"
+                    android:progressTint="@color/DarkBlue" />-->
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/acceptBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:backgroundTint="@color/green"
+                    android:paddingVertical="14.00dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Accept For Ride"
+                    android:textSize="18.00dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/rejectBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn"
+                    android:backgroundTint="#E53935"
+                    android:paddingVertical="14.00dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Reject This Ride"
+                    android:textSize="18.00dp"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </FrameLayout>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--        android:id="@+id/nav_view"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        android:fitsSystemWindows="true"-->
-<!--        app:headerLayout="@layout/nav_header_city_drive_main"-->
-<!--        app:menu="@menu/activity_onboarding_drawer" />-->
+       <!-- <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_city_drive_main"
+        app:menu="@menu/activity_onboarding_drawer" />-->
 </androidx.drawerlayout.widget.DrawerLayout>

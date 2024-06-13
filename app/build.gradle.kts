@@ -67,4 +67,7 @@ dependencies {
     //MapBox
     implementation("com.mapbox.maps:android:11.4.0")
 
+
+    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
+
 }

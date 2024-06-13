@@ -7,13 +7,16 @@ import android.graphics.Canvas
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.provider.Settings
+import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import com.example.citydriver.databinding.ActivityCityDriveMainBinding
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.mapbox.android.gestures.MoveGestureDetector
 import com.mapbox.geojson.Point
 import com.mapbox.maps.CameraOptions
@@ -37,6 +40,12 @@ import com.mapbox.maps.plugin.locationcomponent.OnIndicatorBearingChangedListene
 import com.mapbox.maps.plugin.locationcomponent.OnIndicatorPositionChangedListener
 
 class CityDriveMainActivity : AppCompatActivity() {
+
+
+    private lateinit var progressBar: ProgressBar
+    private val totalTime = 10000L // Total time for countdown in milliseconds (e.g., 10 seconds)
+    private val interval = 100L // Interval for countdown updates in milliseconds (e.g., 0.1 second)
+
 
     private lateinit var pointAnnotationManager: PointAnnotationManager
     private lateinit var  annotationApi: AnnotationPlugin
@@ -81,10 +90,15 @@ class CityDriveMainActivity : AppCompatActivity() {
         binding = ActivityCityDriveMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-     binding.FindDriverBtn.setOnClickListener {
-         val intent = Intent(this, PaymentMethodActivity::class.java)
-         startActivity(intent)
-     }
+
+        binding.acceptBtn.setOnClickListener {
+            startCountdown()
+        }
+
+
+        binding.menuFloatingButton.setOnClickListener {
+            binding.drawerLayout.open()
+        }
 
         mapView = binding.mapView
 
@@ -94,6 +108,20 @@ class CityDriveMainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun startCountdown() {
+        val countDownTimer = object : CountDownTimer(totalTime, interval) {
+            override fun onTick(millisUntilFinished: Long) {
+                val progress = (millisUntilFinished.toFloat() / totalTime * 100).toInt()
+                progressBar.progress = progress
+            }
+
+            override fun onFinish() {
+                progressBar.progress = 0
+            }
+        }
+        countDownTimer.start()
     }
 
 
