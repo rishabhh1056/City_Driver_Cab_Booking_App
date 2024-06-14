@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/purple</item>
         <item name="android:textColor">@color/black</item>
         <item name="background">@color/white</item>
+        <item name="android:statusBarColor">#00FFFFFF</item>
     </style>
 
     <style name="Theme.CityDriver" parent="Base.Theme.CityDriver" />
