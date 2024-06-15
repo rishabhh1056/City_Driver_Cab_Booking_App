@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import android.location.LocationManager
 import androidx.lifecycle.MutableLiveData
+import com.mapbox.common.location.Location
 
 class LocationViewModel(application: Application): AndroidViewModel(application) {
 
@@ -13,8 +14,12 @@ class LocationViewModel(application: Application): AndroidViewModel(application)
 
     val isGPSEnabled: LiveData<Boolean> = _isGPSEnabled
 
-    fun checkGPSStatus(){
+    fun checkGPSStatus() {
         val locationManager = getApplication<Application>().getSystemService(Context.LOCATION_SERVICE) as LocationManager
         _isGPSEnabled.value = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
     }
+
+
+
+
 }

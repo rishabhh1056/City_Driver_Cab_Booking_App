@@ -3,11 +3,9 @@ package com.example.customer_citydriver.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.customer_citydriver.R
 import com.example.customer_citydriver.databinding.SearchItemViewBinding
-import com.example.customer_citydriver.model.Favlocation
 
-class FatchLocationAdapter(var list: ArrayList<Favlocation>) : RecyclerView.Adapter<FatchLocationAdapter.LocationViewHolder>(){
+class FatchLocationAdapter(var list: ArrayList<String>) : RecyclerView.Adapter<FatchLocationAdapter.LocationViewHolder>(){
 
     class LocationViewHolder( var binding: SearchItemViewBinding): RecyclerView.ViewHolder(binding.root) {
 
@@ -27,9 +25,9 @@ class FatchLocationAdapter(var list: ArrayList<Favlocation>) : RecyclerView.Adap
 
         holder.binding.apply {
 
-            tvHeadLocation.text = item.location
-            imageLocation.setImageResource(item.image)
-            tvAddress.text = item.address
+//            tvHeadLocation.text = item.location
+//            imageLocation.setImageResource(item.image)
+//            tvAddress.text = item.address
         }
 
     }

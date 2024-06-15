@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.locationdelegation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -84,5 +85,52 @@ dependencies {
 
     //Gson Converter
     implementation ("com.squareup.retrofit2:converter-gson:2.11.0")
+
+
+
+
+
+    //Mapbox search Apis
+    implementation ("com.mapbox.search:autofill:2.2.0")
+    //discover
+    implementation ("com.mapbox.search:discover:2.2.0")
+    //autocomplete
+    implementation ("com.mapbox.search:place-autocomplete:2.2.0")
+
+    implementation ("com.mapbox.search:offline:2.2.0")
+
+    implementation ("com.mapbox.search:mapbox-search-android:2.2.0")
+
+    implementation ("com.mapbox.search:mapbox-search-android-ui:2.2.0")
+
+//    routines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+
+
+
+//    implementation ("com.mapbox.navigation:core:2.7.1")
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
